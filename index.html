@@ -79,6 +79,42 @@
         </div>
         <!--this is text area-->
         <div id="editor" contenteditable="true"></div>
+
+        <script>
+            function format(command){
+                document.execCommand(command,false,null);
+            }
+            function changeColor(color){
+                document.execCommand('foreColor',false,color);
+            }
+            function align(direction) {
+                let command = '';
+                switch(direction) {
+                 case 'left':
+                    command = 'justifyLeft';
+                    break;
+                 case 'center':
+                    command = 'justifyCenter';
+                    break;
+                 case 'right':
+                    command = 'justifyRight';
+                    break;
+                 case 'justify':
+                    command = 'justifyFull';
+                    break;
+                 default:
+                    return; // invalid direction
+                }
+            document.execCommand(command, false, null);
+            }
+
+            function undo(){
+                document.execCommand('undo',false,null);
+            }
+            function redo(){
+                document.execCommand('redo',false,null);
+            }
+        </script>
         
     </body>
 </html>
