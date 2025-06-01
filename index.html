@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name = "viewport" content="width=device-width,initial-scale=1.0"/>
+        <title>Text Editor</title>
+        
+    </head>
+    <body>
+       <h2>Online Text Editing Application </h2>
+       <!--This is to cteate a tool bar-->
+        <div class="toolbar">
+            
+            <button onclick="format('bold')"><img src="Resources/bold.png" alt="Bold"></button>
+            <button onclick="format('underline')"><img src="Resources/underline.png" alt="Underline"></button>
+            <button onclick="format('italic')"><img src="Resources/italic.png" alt="Italic"></button>
+
+            <input type="color" onchange="changeColor(this.value)" title="Font Color"/>
+
+            <button onclick="align('left')" title="Align Left"><img src="Resources/left.png" alt="Align Left"></button>
+            <button onclick="align('center')" title="Align Center"><img src="Resources/center.png" alt="Align Center"></button>
+            <button onclick="align('right')" title="Align Right"><img src="Resources/right.png" alt="Align Right"></button>
+            <button onclick="align('justify')" title="Justify"><img src="Resources/justify.png" alt="Align Justify"></button>
+            <button onclick="undo()" title="Undo"><img src="Resources/undo.png" alt="Undo"></button>
+            <button onclick="redo()" title="Redo"><img src="Resources/redo.png" alt="Redo"></button>
+        </div>
+        <!--this is text area-->
+        <div id="editor" contenteditable="true"></div>
+        
+    </body>
+</html>
